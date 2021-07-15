@@ -6,7 +6,7 @@ def js_into_pdf(path):
     pdf_writer = PdfFileWriter()
     for page in range(pdf.getNumPages()):
         pdf_writer.addPage(pdf.getPage(page))
-    pdf_writer.addJS('app.alert("18520084-18520509-18520532");')
+    pdf_writer.addJS('app.alert({cMsg:"18520084-18520509-18520532",cTitle:"NT230"});')
     with open('created.pdf', 'wb') as out:
         pdf_writer.write(out)
     print('Created: {0}'.format('created.pdf'))
